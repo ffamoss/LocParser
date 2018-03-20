@@ -15,7 +15,7 @@ LocParser is a localization parser base on [FParsec](https://github.com/stephan-
 # Using
 ## Example file localization.txt
 	key1 = 'key 1 data'
-	key2 = 'key 2 data ' + $param + {$param: " one", " many"}
+	key2 = 'key 2 data ' + $param + {$param: ' one', ' many'}
 	key3 = 'key 3 data ' + key1
 	
 ## Example code
