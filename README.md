@@ -2,23 +2,23 @@
 
 LocParser is a localization parser base on [FParsec](https://github.com/stephan-tolksdorf/fparsec)
 
-##Supported localization gramma
-	- key = 'literal value'
-	- key = $parameterName
-	- key = {$parameterName: 'pluralform1', 'pluralform2'} 
-		Plural forms cound depend on localization, supported localization you can find in LocParser.fs file
-	- key = AnotherKey
-	- key = 'literal' + $parameterName + {$parameterName: 'pluralform1', 'pluralform2'} + anotherKey
-	- ; comment
+# Supported localization gramma
+- key = 'literal value'
+- key = $parameterName
+- key = {$parameterName: 'pluralform1', 'pluralform2'} 
+	Plural forms cound depend on localization, supported localization you can find in LocParser.fs file
+- key = AnotherKey
+- key = 'literal' + $parameterName + {$parameterName: 'pluralform1', 'pluralform2'} + anotherKey
+- ; comment
 	
-##Using
-	###Example file localization.txt
-		key1 = 'key 1 data'
-		key2 = 'key 2 data ' + $param + {$param: " one", " many"}
-		key3 = 'key 3 data ' + key1
+# Using
+## Example file localization.txt
+	key1 = 'key 1 data'
+	key2 = 'key 2 data ' + $param + {$param: " one", " many"}
+	key3 = 'key 3 data ' + key1
 	
-	###Example code
-		let path = @"localization.txt"
+## Example code
+	let path = @"localization.txt"
         use stream = File.OpenRead(path) 
         
         let parserResult = match loadLocFile stream Encoding.UTF8  with
